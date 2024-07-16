@@ -1,0 +1,15 @@
+div {
+  height: 125px;
+  width: 100%;
+  border: 1px solid black;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+nav * {
+  display: flex;
+  padding: 10px;
+}
