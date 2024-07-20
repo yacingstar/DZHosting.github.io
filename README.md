@@ -30,7 +30,7 @@ To set up the project locally, follow these steps:
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/DZHosting.git
+   git clone https://github.com/y-laib/DZHosting.git
    ```
 
 2. **Navigate to the project directory:**
@@ -51,7 +51,7 @@ To set up the project locally, follow these steps:
    npm start
    ```
 
-   The project will be available at `http://localhost:3000`.
+   ctrl + right-click on the provided `localhost` link.
 
 ## Usage
 
@@ -117,10 +117,10 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contact
 
-If you have any questions or need further information, feel free to contact us at:
+If you have any questions or need further information, feel free to contact me at:
 
-- **Email:** yourname@dzhosting.com
-- **Website:** [DZHosting](https://www.dzhosting.com)
+- **Email:** l.ahmedyacine@gmail.com
+- **Website:** Under construction! Our website is currently playing hide and seek. Catch it live soon!
 
 ---
 
