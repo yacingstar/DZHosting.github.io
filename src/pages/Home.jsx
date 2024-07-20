@@ -1,4 +1,6 @@
+import Footers from "../components/Footers";
 import Benefits from "../components/homepage/Benefits";
+import Contact from "../components/homepage/Contact";
 import Hero from "../components/homepage/Hero";
 import Services from "../components/homepage/Services";
 
@@ -11,7 +13,9 @@ const Home = () => {
       <Services />
       {/* Portfolio */}
       {/* Contact */}
-      <div className="Contact">Contact Us</div>
+      <Contact />
+      {/* Footer */}
+      <Footers />
     </>
   );
 };
