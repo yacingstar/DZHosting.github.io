@@ -1,63 +1,78 @@
+import { useCallback } from "react";
+import Benefits from "../components/homepage/Benefits";
 import Hero from "../components/homepage/Hero";
+import useEmblaCarousel from "embla-carousel-react";
+import { useEffect } from "react";
+import { useState } from "react";
+const descriptions = [
+  "Description for Web Hosting",
+  "Description for Web Design",
+  "Description for Professional Email",
+];
 
 const Home = () => {
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const updateSelectedIndex = useCallback(() => {
+    if (emblaApi) {
+      const index = emblaApi.selectedScrollSnap();
+      setSelectedIndex(index);
+    }
+  }, [emblaApi]);
+
+  useEffect(() => {
+    if (emblaApi) {
+      // Update the index on init and when it changes
+      updateSelectedIndex();
+      emblaApi.on("select", updateSelectedIndex);
+    }
+  }, [emblaApi, updateSelectedIndex]);
+
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
+
   return (
     <>
       <Hero />
+      <Benefits />
       {/* Services */}
-      <div className="flex flex-col border border-black">
-        {/* Web Hosting */}
-        <div className="flex flex-row justify-around border border-black">
-          <div className="border border-black">
-            <h1 className="font-bold">Enhance Your Brand Image</h1>
-            <p>
-              Boost your online presence with our reliable web hosting, keeping
-              your website accessible to reach and engage more clients. Enjoy
-              fast loading times and seamless performance to attract new
-              customers and enhance your credibility.
-            </p>
+      <div className="embla flex flex-col border border-black">
+        <h1 className="font-bold text-3xl">Our Services</h1>
+        <div className="services flex flex-row items-center border">
+          <button className="embla__prev flex" onClick={scrollPrev}>
+            Prev
+          </button>
+          <div
+            className="embla__viewport flex mx-auto h-56 max-w-lg border"
+            ref={emblaRef}
+          >
+            <div className="embla__container h-full">
+              <div className="embla__slide flex items-center justify-center">
+                Web Hosting
+              </div>
+              <div className="embla__slide flex items-center justify-center">
+                Web Design
+              </div>
+              <div className="embla__slide flex items-center justify-center">
+                Professional Email
+              </div>
+            </div>
           </div>
-          <div className="">
-            <img src="path/to/your/image.jpg" alt="Web Design" />
-          </div>
-        </div>
-        {/* Web Design */}
-        <div className="flex flex-row justify-around border border-black">
-          <div className="border border-black">
-            <h1 className="font-bold">
-              Showcase Your Services with Elegant Web Design
-            </h1>
-            <p>
-              Transform your business with our professional web design services.
-              Stand out from competitors with a visually appealing design that
-              reflects your brand's identity and values.
-            </p>
-          </div>
-          <div className="">
-            <img src="path/to/your/image.jpg" alt="Web Design" />
-          </div>
-        </div>
-        {/* Email and domain */}
-        <div className="flex flex-row justify-around border border-black">
-          <div className="border border-black">
-            <h1 className="font-bold">Strengthen Trust with Branded Email</h1>
-            <p>A little text about Email and domain.</p>
-          </div>
-          <div className="">
-            <img src="path/to/your/image.jpg" alt="Web Design" />
-          </div>
-        </div>
-        {/* E-Commerce */}
-        <div className="flex flex-row justify-around border border-black">
-          <div className="border border-black">
-            <h1 className="font-bold">Sell Anytime, Anywhere</h1>
-            <p>A little text about Ecommerce.</p>
-          </div>
-          <div className="">
-            <img src="path/to/your/image.jpg" alt="Web Design" />
+          <div className="description">{descriptions[selectedIndex]}</div>
+          <div className="buttons flex flex-row justify-between">
+            <button className="embla__next flex" onClick={scrollNext}>
+              Next
+            </button>
           </div>
         </div>
       </div>
+      {/* Portfolio */}
+      {/* Contact */}
     </>
   );
 };

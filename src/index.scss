@@ -7,3 +7,14 @@
   margin: 0 auto; // Center the container
   padding: 0 20px; // Add some padding on the sides
 }
+
+.embla__viewport {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
