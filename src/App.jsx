@@ -8,7 +8,7 @@ import Web_Design from "./pages/Web_Design";
 import DomaineEmail from "./pages/DomaineEmail";
 const App = () => {
   return (
-    <div className="container">
+    <div className="wholething border border-blue-500 flex justify-center flex-col">
       <Router>
         <Header />
         <Routes>

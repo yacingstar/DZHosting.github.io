@@ -1,3 +1,5 @@
+import Wave from "./Wave";
+
 const Benefits = () => {
   return (
     <>

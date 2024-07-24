@@ -2,10 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-.container {
-  max-width: 1200px; // Set the maximum width of the content
-  margin: 0 auto; // Center the container
-  padding: 0 20px; // Add some padding on the sides
+.wholething {
+  background-color: #eefbfb;
 }
 
 .embla__viewport {
