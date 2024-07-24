@@ -36,14 +36,14 @@ const Services = () => {
   }, [emblaApi]);
   return (
     <>
-      <div className="embla flex flex-col border border-black">
+      <div className="embla flex flex-col">
         <h1 className="font-bold text-3xl">Our Services</h1>
         <div className="services flex flex-row items-center border">
           <button className="embla__prev flex" onClick={scrollPrev}>
             Prev
           </button>
           <div
-            className="embla__viewport flex mx-auto h-56 max-w-lg border"
+            className="embla__viewport flex mx-auto h-56 max-w-lg "
             ref={emblaRef}
           >
             <div className="embla__container h-full">

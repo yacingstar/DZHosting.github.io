@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.wholething {
-  background-color: #eefbfb;
-}
-
 .embla__viewport {
   overflow: hidden;
 }
@@ -15,4 +11,9 @@
 .embla__slide {
   flex: 0 0 100%;
   min-width: 0;
+}
+
+.content-wrapper {
+  width: 55vw;
+  margin: 0 auto;
 }

@@ -8,19 +8,21 @@ import Web_Design from "./pages/Web_Design";
 import DomaineEmail from "./pages/DomaineEmail";
 const App = () => {
   return (
-    <div className="wholething border border-blue-500 flex justify-center flex-col">
-      <Router>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<NotFound />} />
-          <Route path="/web_design" element={<Web_Design />} />
-          <Route path="/domain_email" element={<DomaineEmail />} />
-        </Routes>
-      </Router>
-    </div>
+    <Router>
+      <section className="bg-primary">
+        <div className="content-wrapper">
+          <Header />
+        </div>
+      </section>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<NotFound />} />
+        <Route path="/web_design" element={<Web_Design />} />
+        <Route path="/domain_email" element={<DomaineEmail />} />
+      </Routes>
+    </Router>
   );
 };
 

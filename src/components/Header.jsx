@@ -5,11 +5,27 @@ const Header = () => {
   return (
     <>
       <div className="header">
-        <nav>
-          <Link to="/">DZHosting</Link>
-          <Link to="web_design">Services</Link>
-          <Link to="/portfolio">Portfolio</Link>
-          <Link to="/contact">Contact</Link>
+        <nav className="flex justify-between items-center p-4 w-full">
+          <Link to="/" className="font-abril text-secondary text-2xl">
+            DZHOSTING
+          </Link>
+          <div className="flex space-x-10">
+            <Link
+              to="web_design"
+              className="font-roboto text-secondary text-lg"
+            >
+              Services
+            </Link>
+            <Link
+              to="/portfolio"
+              className="font-roboto text-secondary text-lg"
+            >
+              Portfolio
+            </Link>
+            <Link to="/contact" className="font-roboto text-secondary text-lg">
+              Contact
+            </Link>
+          </div>
         </nav>
       </div>
     </>

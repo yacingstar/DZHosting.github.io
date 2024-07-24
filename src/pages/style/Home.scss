@@ -1,22 +1,17 @@
-.ssection {
-  width: 60vw;
-  margin: 0 auto;
-  border: 1px solid blue;
-  justify-content: space-between;
-  display: flex;
-  flex-direction: column;
-  z-index: 2;
+.custom-shape-divider-top-1721850041 {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
 }
 
-.ssection2 {
-  width: 60vw;
-  margin: 0 auto;
-  border: 1px solid blue;
-  justify-content: space-between;
-  display: flex;
-  flex-direction: column;
-  z-index: 2;
+.custom-shape-divider-top-1721850041 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 260px;
 }
-.yessir {
-  background-color: #555555;
+
+.custom-shape-divider-top-1721850041 .shape-fill {
+  fill: #eefbfb;
 }
