@@ -15,3 +15,61 @@
 .custom-shape-divider-top-1721850041 .shape-fill {
   fill: #eefbfb;
 }
+
+.wavooo {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wavooo svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 277px;
+}
+
+.wavooo .shape-fill {
+  fill: #555555;
+}
+
+.bookthing {
+  position: absolute;
+
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.bookthing svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 404px;
+}
+
+.bookthing .shape-fill {
+  fill: #eefbfb;
+}
+
+.nicecurve {
+  position: absolute;
+
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.nicecurve svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 152px;
+}
+
+.nicecurve .shape-fill {
+  fill: #eefbfb;
+}
