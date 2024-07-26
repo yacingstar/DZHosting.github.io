@@ -8,7 +8,7 @@ const Hero = () => {
         <div className="hero-content text-center">
           <h1 className="font-roboto-serif font-bold text-h1 text-secondary">
             Reussissez en ligne <br />
-            avec un site web
+            avec un site web mouaaaad hello
           </h1>
           <p className="font-roboto-sans text-body text-secondary">
             La marque d’un professionel
